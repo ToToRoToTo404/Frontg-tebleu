@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="scss/main.css">
     <title>Gîte bleu</title>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
     <header class="bg-primary">
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
@@ -40,10 +40,19 @@
             </div>
           </nav>
     </header>
-<main id="main-page">
+<main class="flex-shrink-0" id="main-page">
     <!--Contenu de la page-->
 </main>
-    <footer>Le footer</footer>
+    <footer class="bg-primary text-white py-3 mt-auto">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <a href="/contact" class="text-white me-3">Contact</a>
+                    <a href="/cgu" class="text-white">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     
     <script type="module" src="Router/router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
