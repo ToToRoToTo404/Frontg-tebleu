@@ -11972,7 +11972,7 @@ html {
 }
 
 main {
-  margin-bottom: 250px;
+  margin-bottom: 60px;
 }
 
 footer.footer {
@@ -11989,7 +11989,7 @@ h1, .h1 {
 
 p {
   font-size: 18px;
-  color: white;
+  color: black;
 }
 
 .hero-scene {
@@ -12018,7 +12018,7 @@ p {
 }
 .hero-scene .hero-scene-content .btn {
   margin-top: 2rem;
-  background-color: var(--bs-dark);
+  background-color: var(--bs-primary);
   color: white;
 }
 .hero-scene .hero-scene-content .btn:hover {
