@@ -11980,4 +11980,47 @@ footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+h1, .h1 {
+  font-size: 50px;
+  color: white;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+}
+
+.hero-scene {
+  position: relative;
+}
+.hero-scene::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/photoHero.jpg);
+  background-size: cover;
+  filter: brightness(0.5);
+}
+.hero-scene * {
+  position: relative;
+}
+.hero-scene .hero-scene-content {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-scene .hero-scene-content .btn {
+  margin-top: 2rem;
+  background-color: var(--bs-dark);
+  color: white;
+}
+.hero-scene .hero-scene-content .btn:hover {
+  background-color: #86612c;
 }/*# sourceMappingURL=main.css.map */
