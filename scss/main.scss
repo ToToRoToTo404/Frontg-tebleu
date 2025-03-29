@@ -20,7 +20,7 @@ footer.footer{
 h1{
     $font-family-base: 'Poppins, sans-serif' !default;
     font-size: 50px;
-    color: white;
+    color: black;
 }
 
 p{
@@ -55,6 +55,10 @@ p{
         align-items: center;
         justify-content: center;
 
+        h1 {
+            color: white;  // Met le titre en blanc
+        }
+
         .btn {
             margin-top: 2rem;  // Ajoute de l'espace au-dessus du bouton
             background-color: var(--bs-primary); // Utilise la variable de couleur primaire de Bootstrap
@@ -64,5 +68,34 @@ p{
                 background-color: darken($dark, 10%);
             }
         }
+    }
+}
+
+.image-card{
+    position: relative;
+    height: 300px;  // Hauteur fixe pour le conteneur
+
+    &:hover{
+        .titre-image{
+            opacity: 1;
+        }
+        img{
+            filter: brightness(0.3);
+        }
+    }
+
+    img{
+        transition: all 0.3s;
+        height: 100%;  // L'image prend toute la hauteur du conteneur
+        object-fit: cover;  // L'image garde ses proportions et couvre tout l'espace
+    }
+
+    .titre-image{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s;
     }
 }

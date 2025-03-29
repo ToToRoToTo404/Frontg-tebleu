@@ -11984,7 +11984,7 @@ footer.footer {
 
 h1, .h1 {
   font-size: 50px;
-  color: white;
+  color: black;
 }
 
 p {
@@ -12016,6 +12016,9 @@ p {
   align-items: center;
   justify-content: center;
 }
+.hero-scene .hero-scene-content h1, .hero-scene .hero-scene-content .h1 {
+  color: white;
+}
 .hero-scene .hero-scene-content .btn {
   margin-top: 2rem;
   background-color: var(--bs-primary);
@@ -12023,4 +12026,29 @@ p {
 }
 .hero-scene .hero-scene-content .btn:hover {
   background-color: #86612c;
+}
+
+.image-card {
+  position: relative;
+  height: 300px;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
+}
+.image-card img {
+  transition: all 0.3s;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
 }/*# sourceMappingURL=main.css.map */
