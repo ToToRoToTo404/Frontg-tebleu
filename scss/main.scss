@@ -1,4 +1,5 @@
-@import url("node_modules/bootstrap-icons/font/bootstrap-icons.css");
+// Correction de l'import des icônes Bootstrap
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
 @import 'custom';
 
 html{
@@ -97,5 +98,53 @@ p{
         transform: translate(-50%, -50%);
         opacity: 0;
         transition: all 0.3s;
+    }
+}
+
+.flatpickr-calendar {
+    margin: 20px auto !important;
+    width: 100% !important;
+    max-width: 800px;
+    box-shadow: none !important;
+    background-color: white;
+    display: block !important;
+    
+    .flatpickr-day {
+        &.selected {
+            background-color: var(--bs-primary) !important;
+            border-color: var(--bs-primary) !important;
+        }
+        
+        &:hover {
+            background-color: lighten($primary, 30%);
+        }
+    }
+    
+    .flatpickr-months {
+        .flatpickr-month {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+        
+        .flatpickr-prev-month,
+        .flatpickr-next-month {
+            color: white !important;
+            
+            &:hover {
+                color: darken(white, 10%) !important;
+            }
+        }
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 1rem; /* Ajoute un espace au-dessus du bouton */
+}
+
+@media (min-width: 768px) {
+    .flatpickr-calendar {
+        margin: 0 auto !important;
     }
 }
