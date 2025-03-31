@@ -1,0 +1,33 @@
+<div class="hero-scene text-center">
+    <div class="hero-scene-content">
+        <h1>Contactez-nous</h1>
+    </div>
+</div>
+<div class="container">
+    <p class="text-center mb-4">Pour toute question ou demande de réservation, n'hésitez pas à nous contacter.</p>
+    
+    <form method="POST" action="/contact">
+        <div class="mb-3">
+            <label for="name" class="form-label">Votre nom</label>
+            <input type="text" class="form-control" id="name" placeholder="Jean Dupont">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Votre email</label>
+            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Votre message (1000 caractères maximum)</label>
+            <textarea class="form-control" 
+                      id="message" 
+                      rows="3" 
+                      maxlength="1000"
+                      required></textarea>
+            <div class="form-text">
+                Les messages sont limités à 1000 caractères pour assurer un traitement optimal.
+            </div>
+        </div>
+        <div class="text-center pt-4">
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+    </form>
+</div>
