@@ -10573,23 +10573,23 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  --bs-form-check-bg: var(--bs-body-bg);
-  flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.25em;
-  vertical-align: top;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: var(--bs-form-check-bg);
-  background-image: var(--bs-form-check-bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: var(--bs-border-width) solid var(--bs-border-color);
-  -webkit-print-color-adjust: exact;
-          print-color-adjust: exact;
+  appearance: button;
+  -webkit-appearance: button;
+}
+.form-check-input[type=checkbox] {/* ... */}
+.form-check-input[type=radio] {/* ... */}
+.form-check-input:active {/* ... */}
+.form-check-input:focus {/* ... */}
+.form-check-input:checked {/* ... */}
+.form-check-input:checked[type=checkbox] {/* ... */}
+.form-check-input:checked[type=radio] {/* ... */}
+.form-check-input[type=checkbox]:indeterminate {/* ... */}
+.form-check-input:disabled {/* ... */}
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {/* ... */}
+
+
+.form-check-input {
+  print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
@@ -20190,20 +20190,35 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html, body {
+  height: 100%; /* Assure que la page occupe toute la hauteur */
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
 
 main {
+  min-height: calc(100vh - 60px); /* Ajuste la hauteur pour inclure le footer */
   margin-bottom: 60px;
 }
 
 footer.footer {
   padding: 15px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: relative; /* Footer suit le flux normal de la page */
+  background-color: #000; /* Ajoute une couleur de fond pour le footer */
+  color: #fff; /* Texte blanc pour le footer */
+}
+
+footer {
+  margin-top: 0 !important; /* Supprime la marge supérieure */
+  padding-top: 0 !important; /* Supprime le padding supérieur */
+}
+
+.container-fluid.bg-dark, .bg-dark.container-sm, .bg-dark.container-md, .bg-dark.container-lg, .bg-dark.container-xl, .bg-dark.container-xxl {
+  margin-bottom: 0 !important; /* Supprime la marge inférieure */
+  padding-bottom: 0 !important; /* Supprime le padding inférieur */
 }
 
 h1, .h1 {
@@ -20275,58 +20290,4 @@ p {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s;
-}
-
-.flatpickr-calendar {
-  margin: 20px auto !important;
-  width: 100% !important;
-  max-width: 800px;
-  box-shadow: none !important;
-  background-color: white;
-  display: block !important;
-}
-.flatpickr-calendar .flatpickr-day.selected {
-  background-color: var(--bs-primary) !important;
-  border-color: var(--bs-primary) !important;
-}
-.flatpickr-calendar .flatpickr-day:hover {
-  background-color: #bdcbdb;
-}
-.flatpickr-calendar .flatpickr-months .flatpickr-month {
-  background-color: var(--bs-primary);
-  color: white;
-}
-.flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
-.flatpickr-calendar .flatpickr-months .flatpickr-next-month {
-  color: white !important;
-}
-.flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover,
-.flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover {
-  color: #e6e6e6 !important;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Centre horizontalement */
-  margin-top: 1rem; /* Ajoute un espace au-dessus du bouton */
-}
-
-@media (min-width: 768px) {
-  .flatpickr-calendar {
-    margin: 0 auto !important;
-  }
-}
-@media (max-width: 576px) {
-  iframe {
-    height: 300px; /* Réduit la hauteur de l'iframe sur mobile */
-  }
-  .ps-md-4 {
-    padding-left: 0; /* Supprime le padding gauche sur mobile */
-  }
-  .text-end {
-    text-align: center !important; /* Centre le texte sur mobile */
-  }
-  .btn {
-    width: 100%; /* Le bouton prend toute la largeur sur mobile */
-  }
 }/*# sourceMappingURL=main.css.map */
