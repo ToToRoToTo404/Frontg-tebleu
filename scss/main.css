@@ -20315,4 +20315,18 @@ p {
   .flatpickr-calendar {
     margin: 0 auto !important;
   }
+}
+@media (max-width: 576px) {
+  iframe {
+    height: 300px; /* Réduit la hauteur de l'iframe sur mobile */
+  }
+  .ps-md-4 {
+    padding-left: 0; /* Supprime le padding gauche sur mobile */
+  }
+  .text-end {
+    text-align: center !important; /* Centre le texte sur mobile */
+  }
+  .btn {
+    width: 100%; /* Le bouton prend toute la largeur sur mobile */
+  }
 }/*# sourceMappingURL=main.css.map */
