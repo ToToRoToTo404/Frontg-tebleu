@@ -10573,23 +10573,23 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  appearance: button;
-  -webkit-appearance: button;
-}
-.form-check-input[type=checkbox] {/* ... */}
-.form-check-input[type=radio] {/* ... */}
-.form-check-input:active {/* ... */}
-.form-check-input:focus {/* ... */}
-.form-check-input:checked {/* ... */}
-.form-check-input:checked[type=checkbox] {/* ... */}
-.form-check-input:checked[type=radio] {/* ... */}
-.form-check-input[type=checkbox]:indeterminate {/* ... */}
-.form-check-input:disabled {/* ... */}
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {/* ... */}
-
-
-.form-check-input {
-  print-color-adjust: exact;
+  --bs-form-check-bg: var(--bs-body-bg);
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--bs-form-check-bg);
+  background-image: var(--bs-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
